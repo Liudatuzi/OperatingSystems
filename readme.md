@@ -1,17 +1,13 @@
-problem1
+Problem2 Test your new system call
 
-Write a new system call in Linux.
-The system call you write should take two arguments and return the process tree information in a depthfirst-search (DFS) order.
-Each system call must be assigned a number. Your system call should be assigned number 287
+Write a simple C program which calls ptree
 
-in the folder pro1 open the terminal
-make
-android avd
-adb push prinfo.ko /data/pro1
-adb shell 
-cd data
-insmod pro1
+Print the entire process tree (in DFS order) using tabs to indent children with respect to their parents.
 
-
-
-
+cd pro2/jni
+ndk-build
+emulator –avd OsPrj-516021910212 -kernel ~/Desktop/kernel/goldfish/arch/arm/boot/zImage –show-kernel
+~/Desktop/homework/pro2/libs/armeabi# adb push ./psShowARM /data/misc
+adb shell
+cd /data/misc
+./psShowARM
